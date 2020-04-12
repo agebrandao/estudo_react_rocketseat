@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "react-switch": "^5.0.1",
+    "styled-components": "^5.0.1"
+  },
+  "devDependencies": {
+    "@types/styled-components": "^5.0.1"
+  },
+  "files": [
+    "src/styles/styled.d.ts"
+  ]
+}

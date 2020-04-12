@@ -1,0 +1,84 @@
+/* Reset o html e body */
+html, body{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #7159c1;
+}
+
+header{
+    background: yellow;
+    /* height: 100px; */
+
+    /* Linha virtual o header começa na coluna 1 e termina na 3 */
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+    /* OU */
+    /* grid-column: 1/3; */
+    /* ou */
+    grid-area: header;
+
+    /* No container define qual o layout  */
+}
+
+main{
+    background: blue;
+    /* height: 100px; */
+
+    /* grid-column-start: 1;
+    grid-column-end: 2; */
+
+    /* Para que o templates-area saiba quem é header. POde ter qualquer nome Ex: h */
+    grid-area: main;
+}
+
+Aside{
+    background: green;
+    /* height: 100px; */
+    
+    /* grid-column-start: 2;
+    grid-column-end: 3; */
+
+    grid-area: aside;
+}
+
+footer{
+    background: red;
+    /* height: 100px; */
+
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+
+    grid-area: footer;
+}
+
+.container{
+    display: grid;
+    /* Coluna 1fr: flex 
+    primeira coluna pega 3 frames e a segunda 1 frame*/
+    grid-template-columns: 3fr 1fr;
+
+    /* três colunas, a primeira com altura em de 20, a segunda de 70  e a terceira de 10*/
+    grid-template-rows: 20vh 70vh 10vh;
+
+    /* Espaço entre linhas e colunas */
+    /* grid-row-gap: 20px;
+    grid-column-gap: 20px; */
+
+   /* ou */
+
+    /* grid-gap: 20px; */
+
+    /* a primeira linha  as duas colunas terá o header*/
+
+    grid-template-areas: "header header"
+                         "main aside"
+                         "footer footer";
+
+                         /* Se quiser exemplo o footer so na segunda coluna, colocar:
+                          
+                         ". footer" 
+
+                          */
+
+}

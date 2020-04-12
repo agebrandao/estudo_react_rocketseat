@@ -1,0 +1,419 @@
+/* 
+
+Muitas opções de css:
+
+https://css-tricks.com/ 
+
+*/
+
+/* Id (#) tem mais força que a classe (.)*/
+
+body{
+
+    background: #e5e5e5;
+    color: #252828;
+    /* text-align: center; */
+    
+    /* O navegador já define a margem do body para 8px. 
+    Para retirar essa margem, colocar margin = 0
+    */
+    margin:0;
+
+
+    /* font do google */
+    /* https://fonts.google.com/ */
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*
+body #container tem prescendencia em relação a #container 
+Quanto mais profunda a cascata maior é sua força
+
+O container que está dentro do boby
+
+        body #container{
+
+        }
+
+*/
+
+.hide{
+    display: none;
+}
+
+a{
+    color: #ff5E84;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover{
+   text-decoration: underline;
+}
+
+p, .description{
+    font-size: 16px;
+    /* Altura entre linhas */
+    line-height: 24px;
+    /* espaço entre letras */
+    letter-spacing: 0.1px;
+}
+
+#container {
+
+    /* A caixa (DIV) terá 980px começando a esquerda. Deixando uma margem a direita*/
+    max-width: 980px;
+
+    /* Pega 90% da pagina. O container vai ter sempre um espaçamento de 10% até o início da página  */
+    width: 90%; 
+
+    /* Com a div de 100px a caixa fica com a altura muito pequena e o conteúdo transborda da caixa
+    (comportamento padrão).
+    Para o conteúdo ficar dentro da caixa mesmo com o conteúdo maior, definir a propriedade :
+        overflow: hidden
+
+        height: 100px;
+    */
+    
+    /* A DIV já está com margem a esquerda. 
+       Para centralizar basta mandar alinhar a margem direita e esquerda automaticamente*/
+    /* Alinha horizontalmente no meio. 
+
+    margin-right: auto;
+    margin-left: auto;
+    */
+
+    margin: 40px auto;
+
+
+    /* Display flex pega os filhos e coloca em linha */
+    display: flex;
+}
+
+#buttons{
+
+    display: flex;
+    margin-bottom: 32px;
+
+    /* justify-content só funciona para alguns displays.  
+       Flex, grid...
+    Valores:
+       space-evenly (espaço na frente e atrás dos componentes)
+       space-between (espaço no meio dos componentes)       
+    */
+    justify-content: space-evenly;
+}
+
+#intro{
+    width: 250px; 
+    margin-right: 20px;
+}
+
+main{
+
+    /* Coloca a margem top, right, bottom e left (Sentido horário) com 32px; 
+    margin: 32px;
+
+    //top, bottom com 32px e right e left com 100px
+    margin: 32px, 100px;
+
+    //top, laterais e bottom
+    margin: 32px, 100px;
+
+    //top, right, bottom e left 
+    margin: 32px, 100px, 0, 0;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    */
+    
+    margin: 32px, 0;
+}
+
+footer {
+    text-align: center;
+}
+
+/* 
+É possível definir estilos para vários componentes 
+footer, #buttons{
+    text-align: center;
+   
+} */
+
+button{
+    color: #ff8E84;
+    border: none;
+    font-weight: bold;
+    background: none;
+
+    
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+
+    cursor: pointer;
+
+    /* Retirar a borda do botão quando ele é selecionado
+     outline: none;
+    */
+   
+}
+
+/* hover: quando o mouse estiver em cima do botão */
+button:hover{
+    /* Coloca uma linha  */
+    text-decoration: underline;
+}
+
+button.fat{
+    color: white;
+    background: #ff5E84;
+
+    width: 150px;
+    height: 30px;
+
+    /* Borda dos botões */
+    border-radius: 6px;
+
+    /* Sombra na borda do botão 
+    eixo x , eixo y, borrado e a cor */
+    /* box-shadow: 0px 8px 16px rgba(255,0,92,0.16); */
+
+    /* 00: nao vai aparecer a borda 
+       FF: borda muito forte 
+       44:
+       32: */
+    box-shadow: 0px 8px 16px #ff5E8444; 
+
+    /* border-radius: 6px 0; */
+
+    /* border-bottom-right-radius: ; */
+
+    /* Tempo de transição entre button e button:hover (Verificar quando passa o mouse ele tem um tempo pra mudar de cor */
+    /* Pode ser usado para vários componentes, até para modal, porem o display nao aceita.
+         
+    */
+    transition: 400ms;
+}
+
+/* hover: quando o mouse estiver em cima do botão */
+button.fat:hover{
+    /* Coloca uma linha  */
+    text-decoration: none;
+}
+
+.idea {
+    display: flex;
+    background-color: #FFF;
+    border-radius: 8px;
+
+    /* -8px: Borda de fora para dentro*/
+    box-shadow: 0 4px 16px -8px rgba(1,1,0.1);
+
+    margin-bottom: 32px;
+
+    /* Espaço dentro da caixa. top, right, bottom e left */
+    padding: 32px;
+}
+
+.idea img {
+    width: 68px;
+    height: 60px;
+
+    margin-right: 32px;
+}
+
+.idea h3{
+    margin: 0;
+}
+
+.idea p {
+    margin: 8px 0;
+    color: #777;
+}
+
+.idea .description {
+    margin: 16px 0;
+   
+    
+}
+
+footer{
+
+    text-align: center;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+
+    color:#777;
+
+}
+
+footer a{
+    opacity: 0.7;
+}
+
+/* Modal */
+
+#modal{
+
+    background: #ff5E84;
+
+    /* Posição absoluta (Precisa definir top, bottom, left e right ou View port)*/
+    position: absolute;
+
+    /* Preenche toda a tela */
+    /* top:0;
+    bottom: 0;
+    left: 0;
+    right: 0; */
+
+    /* Ou usa view port (Toda a area visível da tela) */
+    top:0;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    /* Coloca todo o conteúdo no meio */
+
+    /* Eixo y : align*/
+    /* align-items: center; */
+
+    /* Eixo x : justify*/
+    justify-content: center;
+}
+
+/* Vai alterar o content que está dentro do modal */
+#modal .content {
+
+   margin-top: 18px;
+   
+   color: white;
+
+}
+
+#modal .content h1{
+
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+.content form{
+    width: 80%;
+    max-width:  800px;
+
+    margin: 0 auto;
+
+    display: grid;
+    /* Uma grid com duas colunas */
+    /* grid-template-columns: 100px 500px; */
+
+    /* colunas em fração */
+    grid-template-columns: 1fr 1fr;
+
+    /* separação entre componentes. Verificar que o form input está com box-sizing: border-box; */
+    gap: 20px;
+}
+
+/* div 3, 4 e 5 */
+.content form div:nth-child(3),
+.content form div:nth-child(4),
+.content form div:nth-child(5){
+    /* espandir até a coluna 2 */
+    grid-column: span 2;
+}
+
+.input-wrapper{
+    margin: 16px 0;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 8px;
+    /*  box-sizing: content-box  (Padrao) vai somar 100% + 8px do padding ultrapassando e juntando os componentes*/
+    /*  border-box o padding de 8px está dentro do 100%*/
+    box-sizing:  border-box;
+
+    border-radius: 6px;
+    border: 1px solid rgba(141, 25, 25, 0.5);
+
+    /* Remove a borda ao clicar no input */
+    outline: none;
+
+    font-size: 16px;
+    
+}
+
+form label{
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.8px;
+}
+
+form button{
+    background: white;
+    width: 150px;
+    height: 40px;
+
+    border-radius: 6px;
+    cursor: pointer;
+
+    margin-top: 32px;
+
+    /* Colocar o botão na coluna 2 */
+    grid-column: 2;
+    
+    /* Ele deve se justificar no final (No final da segunda coluna por causa do grid-column)*/
+    justify-self: end;
+}
+
+form button:hover{
+    background-color: #0984e3;
+    color: white;
+    text-decoration: none;
+}
+
+#modal.hide{
+    display: none;
+}
+
+/* Colocando os estilos em um componente global */
+/* 
+
+footer a:hover{
+    color: #ff5E84;
+    font-weight: bold;
+} */
+
+
+
+
+
+/* 
+Para o modal abrir devagar
+
+colocar em:
+#modal{
+     transition: 400ms;
+}
+
+
+
+#modal.hide{
+
+    remover:  display: none;
+
+
+    colocar:
+           opacity:0
+           visibility: hidden;
+}
+
+*/

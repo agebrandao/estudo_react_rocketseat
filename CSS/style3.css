@@ -1,0 +1,86 @@
+
+/* Rest body e html */
+html, body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container{
+    background: black;
+    /* Toda a altura visível e largura visível */
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    
+    grid-gap: 5px;
+
+
+    /* grid-template-columns: 10px 10px 10px;
+    grid-template-rows: 10px 10px 10px; */
+
+    /* eixo x (*/
+    /* justify-content: space-evenly; */
+
+    /* Eixo y */
+    /* align-content: space-evenly; */
+
+    /* Para teste do justify-items e align-items */
+    /* justify-items: end;
+    align-items: end; */
+
+
+}
+
+.container > div{
+    background: #7159c1;
+
+    /* Para teste do justify-items e align-items  e justify-self e align-self*/
+    width: 100px;
+    height: 100px;
+
+
+}
+
+.center{
+    justify-self: center;
+    align-self: center;
+}
+
+    /* IMPORTANTE   -------- 
+    
+     Alinhamentos:
+        justify (eixo x) e align (eixo y)
+        content, items e self
+    */
+    
+    /* 
+    justify e alin:
+    O grid e bidirecional, exio x e y 
+    eixo x: direita para a esquerda
+    eixo y: cima para baixo */
+
+
+    /* Justify-content e aling-content nos pertime alinhar o próprio grid, relativo ao espaço fora do grid 
+    
+    Essas propriedades são raras, pois é aplicado caso a grid seja menor que a area definida. 
+    (Por exemplo, quando usamos em px o tamanho do grid, poderemos terminar com um grid pequeno, para o tamanho da area do grid
+    
+    
+    grid-template-columns: 10px 10px 10px;
+    grid-template-rows: 10px 10px 10px;
+
+    */
+
+
+    /* justify-items e align-items vai permitir alinhar os items do nosso grid em quaquer espaço disponível na celula que ele habitar 
+    */
+
+    /* Justify-self e align-self alinha o item em si */
