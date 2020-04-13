@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import { Container, Title, Form, Row, Row1 } from  './styles';
+import { Container, Title, Form, Row, Row1, DivAlingLeft } from  './styles';
 
 const Header: React.FC = () =>{
 
@@ -24,46 +24,46 @@ const Header: React.FC = () =>{
                     </Title> 
 
                     <Row1>
-                        <div>
+                        <DivAlingLeft>
                             <label htmlFor="">Nome</label>                
                             <input type="text"/>
-                        </div>
+                        </DivAlingLeft>
                         
                     </Row1> 
 
                     <Row>
-                        <div>
+                        <DivAlingLeft>
                             <label htmlFor="">Rua</label>
                             <input type="text"/>
-                        </div>
+                        </DivAlingLeft>
 
-                        <div>
+                        <DivAlingLeft>
                             <label htmlFor="">Número</label>
                             <input type="text"/>  
-                        </div>
+                        </DivAlingLeft>
                         
-                        <div>
+                        <DivAlingLeft>
                             <label htmlFor="">Complemento</label>
                             <input type="text"/>
-                        </div>
+                        </DivAlingLeft>
                         
                     </Row>      
 
                     <Row>
-                        <div>
+                        <DivAlingLeft>
                             <label htmlFor="">Cidade</label>
                             <input type="text"/> 
-                        </div>
+                        </DivAlingLeft>
                         
-                        <div>
+                        <DivAlingLeft>
                             <label htmlFor="">Estado</label>
                             <input type="text"/> 
-                        </div>
+                        </DivAlingLeft>
                         
-                        <div>
+                        <DivAlingLeft>
                             <label htmlFor="">CEP</label>
                             <input type="text"/>
-                        </div>    
+                        </DivAlingLeft>    
 
                     </Row>
                    

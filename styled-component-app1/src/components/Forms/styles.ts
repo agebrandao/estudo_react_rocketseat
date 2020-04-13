@@ -34,13 +34,15 @@ export const Form =  styled.div`
 
     background: white;
 
+    /* min-width: 80%; */
+
     margin: 30px;
 
     input {
         background: rgba(0, 0, 0, 0.1);
         border: 0;
         border-radius: 4px;
-        height: 44px;
+        height: 34px;
         width:100%;
         /* padding: 0 15px; */
         
@@ -48,6 +50,10 @@ export const Form =  styled.div`
         letter-spacing: 0;
         color: #999999;
 
+        outline: none;
+
+        font-size: 16px;
+        
         margin: 0 0 10px;
         &::placeholder {
             color: rgba(255, 255, 255, 0.7);
@@ -72,9 +78,8 @@ export const Form =  styled.div`
       label{
         text-align: left;
         margin-bottom: 5px;
-        font-weight: bold;
+        font-weight: bold;        
       }
-
 
 `;
 
@@ -83,33 +88,30 @@ export const Title = styled.div`
     display: flex;
     
     justify-content:space-between; 
-    align-content: center;
-
+    /* align-content: center; */
     align-items: center;
+    width: 100%;  
+    padding-bottom: 10px;
 
     background: #F5F5F5;
     color:black;    
-
-    width: 100%;  
-
-    padding-bottom: 10px;
 
     text-align: center;
     text-transform: uppercase;   
 
     font-family: 'Montserrat', sans-serif;
     
-
 `;
 
 export const Row =  styled.div`
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
       
     gap: 20px;
     
-    margin:30px;
+    margin:20px;
     
 `;
 
@@ -117,6 +119,12 @@ export const Row1 =  styled(Row)`
     grid-template-columns: repeat( 1,  1fr );
 `;
 
+export const DivAlingLeft =  styled.div`
+    display: grid;
+    justify-content:flex-start;
+    grid-template-columns: repeat( 1,  1fr );
+    
+`;
 
  /* &:hover {
             background: ${darken(0.03, '#3b9eff')};
