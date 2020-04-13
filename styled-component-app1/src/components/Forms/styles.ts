@@ -39,16 +39,24 @@ export const Form =  styled.div`
     margin: 30px;
 
     input {
-        background: rgba(0, 0, 0, 0.1);
+        /* background: rgba(0, 0, 0, 0.1);
         border: 0;
+        border-radius: 4px;     */
+        
+
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 1px solid #DDDDDD;
         border-radius: 4px;
+        opacity: 1;
+
         height: 34px;
         width:100%;
-        /* padding: 0 15px; */
-        
+
         text-align: left;
         letter-spacing: 0;
         color: #999999;
+
+        padding: 0 5px;
 
         outline: none;
 
@@ -64,7 +72,7 @@ export const Form =  styled.div`
         width: 100px;     
         margin: 10px 0 0;
         margin-right:10px;
-        height: 34px;
+        height: 44px;
         background: #3b9eff;
         font-weight: bold;
         color: #fff;
@@ -98,31 +106,44 @@ export const Title = styled.div`
 
     text-align: center;
     text-transform: uppercase;   
+    font-weight: bold;
 
     font-family: 'Montserrat', sans-serif;
     
 `;
 
 export const Row =  styled.div`
-
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
-      
-    gap: 20px;
+
+    /* 
+        Row1: grid-template-columns: 1fr;
+        Row2: grid-template-columns: 4fr 1fr 1fr;
+        Row3: grid-template-columns: 2fr 2fr 2fr;
+     */
+    grid-template-columns: ${props => props["aria-details"] || "1fr"};
+    gap: 30px;
     
-    margin:20px;
-    
+    margin:10px 40px;    
 `;
 
-export const Row1 =  styled(Row)`
-    grid-template-columns: repeat( 1,  1fr );
-`;
+// export const Row1 =  styled(Row)`
+//     grid-template-columns: 1fr;
+// `;
+
+// export const Row2 =  styled(Row)`
+
+//     grid-template-columns: 4fr 1fr 1fr;
+// `;
+
+// export const Row3 =  styled(Row)`
+//     grid-template-columns: 2fr 2fr 2fr;
+// `;
 
 export const DivAlingLeft =  styled.div`
     display: grid;
     justify-content:flex-start;
-    grid-template-columns: repeat( 1,  1fr );
+    grid-template-columns: 1fr;
     
 `;
 

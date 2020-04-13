@@ -3,6 +3,7 @@ import React from 'react';
 import './App.css';
 import Login from './components/Login';
 import Form from './components/Forms';
+import Grid from './components/Grid';
 import GlobalStyled from './styles/global';
 import { ThemeProvider, DefaultTheme } from 'styled-components';
 
@@ -15,7 +16,7 @@ function App() {
             {/* <GlobalStyled />
             <Login/> */}
 
-            <Form/>
+            <Grid/>
 
 
         </div>

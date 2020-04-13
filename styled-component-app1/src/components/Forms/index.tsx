@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 
-import { Container, Title, Form, Row, Row1, DivAlingLeft } from  './styles';
+import { Container, Title, Form, Row, DivAlingLeft } from  './styles';
 
-const Header: React.FC = () =>{
+const Forms: React.FC = () =>{
 
    
     return(
@@ -23,15 +23,15 @@ const Header: React.FC = () =>{
 
                     </Title> 
 
-                    <Row1>
+                    <Row aria-details="1fr">
                         <DivAlingLeft>
                             <label htmlFor="">Nome</label>                
                             <input type="text"/>
                         </DivAlingLeft>
                         
-                    </Row1> 
+                    </Row> 
 
-                    <Row>
+                    <Row aria-details="4fr 1fr 1fr">
                         <DivAlingLeft>
                             <label htmlFor="">Rua</label>
                             <input type="text"/>
@@ -49,7 +49,7 @@ const Header: React.FC = () =>{
                         
                     </Row>      
 
-                    <Row>
+                    <Row aria-details="2fr 2fr 2fr">
                         <DivAlingLeft>
                             <label htmlFor="">Cidade</label>
                             <input type="text"/> 
@@ -65,8 +65,7 @@ const Header: React.FC = () =>{
                             <input type="text"/>
                         </DivAlingLeft>    
 
-                    </Row>
-                   
+                    </Row>                   
                     
                 </form>
                 
@@ -76,4 +75,4 @@ const Header: React.FC = () =>{
     )
 }
 
-export default Header;
+export default Forms;
