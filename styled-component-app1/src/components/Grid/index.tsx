@@ -15,14 +15,14 @@ const Grid: React.FC = () =>{
 
     let destinatariosTest1: Destinatario = { 
         id: 1, 
-        name: "Steve", 
+        name: "Anna", 
         endereco:"Rua José de Holanda, 510" 
     };
 
     let destinatariosTest2: Destinatario = { 
-        id: 1, 
-        name: "Anna", 
-        endereco:"Rua Zenóbio linx, 137" 
+        id: 2, 
+        name: "Gabriela", 
+        endereco:"Rua Zenóbio lins, 137" 
     };
 
     let arrayDestinatario: Array<Destinatario> = [];
@@ -59,16 +59,19 @@ const Grid: React.FC = () =>{
     return(
         
         <Container>
-
-            {/* <form action=""> */}
                 
                 <Div>
-                    Cadastro de Destinatário
+                    Gerenciando Destinatários
                 </Div> 
 
                 <Div>
-                
-                    <input type="text" placeholder=" Buscar por destinatários"/>
+                    <form action="">
+                        <Icons color="#999999">
+                            <MdSearch size={25}/>
+                            {/* <MdSearch size={25} color="#999999" /> */}
+                        </Icons>                        
+                        <input type="text" placeholder=" Busca por destinatários"/>
+                    </form>
                     <button  type="submit" >Cadastrar</button>                
                 </Div> 
                     <table>
@@ -85,7 +88,6 @@ const Grid: React.FC = () =>{
                         </tbody>
                     </table>
                 
-            {/* </form> */}
                  
         </Container>
     )

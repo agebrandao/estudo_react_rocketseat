@@ -20,30 +20,45 @@ export const Container = styled.div`
     background: #F5F5F5;
     opacity: 1;
 
-    input {
+    form {
+        display: flex;
+        align-items: center;
 
-        background: #FFFFFF 0% 0% no-repeat padding-box;
-        border: 1px solid #DDDDDD;
+        border: 1px solid #dddddd;
         border-radius: 4px;
-        opacity: 1;
+        background: white 0 0 no-repeat padding-box; 
+        border: 1px solid #dddddd;
 
-        height: 34px;
-        width:100%;
+        height:40px;
 
-        text-align: left;
-        letter-spacing: 0;
-        color: #999999;
+        padding-left:10px;
 
-        padding: 0 5px;
+        max-width: 400px;
 
-        outline: none;
+        input {
 
-        font-size: 16px;
-        
-        margin: 15px 0 20px 0;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: none;
+            border-radius: 4px;
+            opacity: 1;
 
-        width:40vw;
+            width:100%;            
 
+            text-align: left;
+            letter-spacing: 0;
+            color: #999999;
+
+            padding: 0 5px;
+
+            outline: none;
+
+            font-size: 16px;
+            
+            margin: 15px 0 20px 0;
+
+            width:40vw;
+
+        }
     }
 
     button {
@@ -69,7 +84,7 @@ export const Container = styled.div`
     tr{
         display: grid;
         grid-template-columns: 10vw 25vw 30vw 15vw;        
-        text-align: left;
+        text-align: left;        
     }
 
     th{
@@ -80,14 +95,19 @@ export const Container = styled.div`
         background: white;
         margin-bottom: 20px;
         height: 40px;
-        padding: 15px 0 0 15px ;
+        padding: 15px 0 0 15px ;        
+        color: #777777;
     }
 
     td:last-child, th:last-child {
         text-align: right;
         padding-right:30px;
+        border-radius: 0 5px 5px 0;
     }
     
+    td:first-child, th:first-child {
+        border-radius: 5px 0 0 5px;
+    }
 
 `;
 
@@ -116,7 +136,7 @@ export const Div = styled.div`
 export const Icons = styled.span `
 
     color: ${props => props.color };
-    opacity: 1;
+    opacity: 0.8;
 
     font-size:20px;
 
