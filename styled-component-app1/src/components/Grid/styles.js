@@ -4,7 +4,7 @@ export const Container = styled.div`
     
     display: flex;
 
-        /* eixo y */
+    /* eixo y */
     align-content: flex-start;
 
     /* eixo x */
@@ -21,10 +21,6 @@ export const Container = styled.div`
     opacity: 1;
 
     input {
-        /* background: rgba(0, 0, 0, 0.1);
-        border: 0;
-        border-radius: 4px;     */
-        
 
         background: #FFFFFF 0% 0% no-repeat padding-box;
         border: 1px solid #DDDDDD;
@@ -44,17 +40,14 @@ export const Container = styled.div`
 
         font-size: 16px;
         
-        margin: 30px;
+        margin: 15px 0 20px 0;
 
-        /* margin: 0 0 10px;
-        &::placeholder {
-            color: rgba(255, 255, 255, 0.7);
-        } */
+        width:40vw;
+
     }
 
     button {
         width: 100px;     
-        /* margin: 10px 0 0; */
         margin-right:10px;
         height: 34px;
         background: #3b9eff;
@@ -73,19 +66,43 @@ export const Container = styled.div`
         font-weight: bold;        
     }
 
+    tr{
+        display: grid;
+        grid-template-columns: 10vw 25vw 30vw 15vw;        
+        text-align: left;
+    }
+
+    th{
+        padding: 15px 0 15px 15px ;
+    }
+
+    td{
+        background: white;
+        margin-bottom: 20px;
+        height: 40px;
+        padding: 15px 0 0 15px ;
+    }
+
+    td:last-child, th:last-child {
+        text-align: right;
+        padding-right:30px;
+    }
+    
+
 `;
 
-export const DivMain = styled.div`
+export const Div = styled.div`
 
     display: flex;
     
     justify-content:space-between; 
-    /* align-content: center; */
     align-items: center;
     width: 80%;  
-    /* padding-bottom: 10px; */
+
+    margin-top:20px;
 
     background: #F5F5F5;
+
     color:black;    
 
     text-align: center;
@@ -93,46 +110,19 @@ export const DivMain = styled.div`
     font-weight: bold;
 
     font-family: 'Montserrat', sans-serif;
-    
-`;
-
-export const DivSearch =  styled(DivMain)`
-
-   input {
-       width:40vw;
-   }
-    
-   padding-right: 30px;
 
 `;
 
-export const TableTitle =  styled(DivMain)`
-    
-    display: flex;
+export const Icons = styled.span `
 
-    /* eixo x */
-    /* justify-content: center; */
+    color: ${props => props.color };
+    opacity: 1;
 
-    background: #F5F5F5;
-    color:black;    
+    font-size:20px;
 
-    /* min-width: 80%; */
-
-    margin: 30px;
-
+    cursor:  pointer;
 `;
+   
 
-export const TableRow =  styled(DivMain)`
-    
-    display: flex;
-    background: white;
-
-    /* min-width: 80%; */
-
-    margin: 30px;
-
-  
-
-`;
 
 // https://github.com/react-icons/react-icons
