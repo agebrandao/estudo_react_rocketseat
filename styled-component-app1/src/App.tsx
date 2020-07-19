@@ -4,8 +4,13 @@ import './App.css';
 import Login from './components/Login';
 import Form from './components/Forms';
 import Grid from './components/Grid';
+import MenuPopup from './components/MenuPopup';
+
 import GlobalStyled from './styles/global';
 import { ThemeProvider, DefaultTheme } from 'styled-components';
+
+import { FaEdit  } from 'react-icons/fa';
+
 
 function App() {
 
@@ -16,7 +21,9 @@ function App() {
             {/* <GlobalStyled />
             <Login/> */}
 
-            <Grid/>
+            <MenuPopup textMenu="Editar" colorIcon="#4D85EE">
+              <FaEdit/>
+            </MenuPopup>
 
 
         </div>
